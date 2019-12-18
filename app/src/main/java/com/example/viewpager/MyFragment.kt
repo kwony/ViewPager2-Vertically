@@ -1,8 +1,6 @@
 package com.example.viewpager
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +17,7 @@ class MyFragment() : Fragment() {
 
             args.putInt(EXTRA_POSITION, position)
             fragment.arguments = args
+
             return fragment
         }
     }
@@ -28,8 +27,9 @@ class MyFragment() : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.d("MyFragment", "onViewCreated, position: " + arguments?.getInt(EXTRA_POSITION, -1))
-//        edit_text.requestFocusFromTouch()
         super.onViewCreated(view, savedInstanceState)
+
+        val position = arguments?.getInt(EXTRA_POSITION, -1)?: -1
+        fr_myfragment_position.text = position.toString()
     }
 }
