@@ -6,4 +6,4 @@ Vertical View Pager2 bug report.
 - When I touch text editor, it lost its focus until I touch it again. It behaves differently depending on device and platform version
 - I test it on GALAXY Note10 with Android P. 
 
-![](https://github.com/kwony/ViewPager2-Vertically/blob/master/assets/sample_focus_lost.gif.gif)
+![](https://github.com/kwony/ViewPager2-Vertically/blob/master/assets/sample_focus_lost.gif)
