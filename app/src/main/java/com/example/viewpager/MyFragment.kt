@@ -1,9 +1,11 @@
 package com.example.viewpager
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_myfragment.*
 
@@ -31,5 +33,7 @@ class MyFragment() : Fragment() {
 
         val position = arguments?.getInt(EXTRA_POSITION, -1)?: -1
         fr_myfragment_position.text = position.toString()
+
+        Toast.makeText(activity?.applicationContext, "fragment onViewCreated, position: " + position, Toast.LENGTH_SHORT).show()
     }
 }
